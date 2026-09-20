@@ -1,1 +1,110 @@
-<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>鹈鹕骑车</title><style>*{box-sizing:border-box}body{margin:0;background:#f6f0df;color:#24443f;font-family:system-ui,-apple-system,sans-serif;overflow:hidden}.t{position:fixed;left:6vw;top:5vh;z-index:2}.t b{font-size:clamp(30px,5vw,64px);font-weight:500}.t p{color:#b76542}svg{width:100vw;height:100vh}.wheel{transform-box:fill-box;transform-origin:center;animation:spin 1.15s linear infinite}.bob{animation:bob .55s ease-in-out infinite alternate}.scarf{transform-origin:635px 247px;animation:scarf .7s ease-in-out infinite alternate}.road{animation:road 1.15s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}@keyframes bob{to{transform:translateY(4px)}}@keyframes scarf{to{transform:rotate(7deg)}}@keyframes road{to{transform:translateX(-160px)}}@media(prefers-reduced-motion:reduce){*{animation-play-state:paused!important}}</style><div class="t"><p>PELICAN ON WHEELS</p><b>骑慢一点，<br>海风会等你。</b></div><svg viewBox="0 0 1200 700" aria-label="鹈鹕在海边骑自行车"><rect width="1200" height="700" fill="#f6f0df"/><circle cx="1000" cy="140" r="55" fill="#e7b45d" opacity=".65"/><path d="M0 400 Q180 365 350 405T700 390T1200 395V570H0Z" fill="#c9ded6"/><path d="M0 430q180-30 360 0t360 0t480 0" fill="none" stroke="#8bb3ad" stroke-width="3"/><g class="road" stroke="#b8a98b" stroke-width="5" stroke-dasharray="70 90"><path d="M-200 590H1400"/></g><g transform="translate(0 5)"><g class="wheel" transform="translate(420 520)"><circle r="112" fill="none" stroke="#294943" stroke-width="8"/><g stroke="#71847b" stroke-width="2"><path d="M-105 0H105M0-105V105M-74-74 74 74M-74 74 74-74"/></g></g><g class="wheel" transform="translate(790 520)"><circle r="112" fill="none" stroke="#294943" stroke-width="8"/><g stroke="#71847b" stroke-width="2"><path d="M-105 0H105M0-105V105M-74-74 74 74M-74 74 74-74"/></g></g><g fill="none" stroke="#5d876f" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><path d="M420 520 535 365 610 520H420L555 445 790 520 700 350"/><path d="M535 365h-55M675 350h70"/></g><g class="bob"><path d="M550 385Q510 300 545 210Q580 145 650 175Q695 190 690 245Q682 302 625 330L610 390Z" fill="#fffaf0" stroke="#294943" stroke-width="4"/><path d="M646 205Q760 205 808 238Q731 268 647 253Z" fill="#e9a650" stroke="#294943" stroke-width="4"/><circle cx="655" cy="194" r="7" fill="#294943"/><path d="M570 193Q600 135 670 163L690 190Q625 171 570 193Z" fill="#668d75" stroke="#294943" stroke-width="4"/><path class="scarf" d="M625 246Q560 238 500 270Q545 280 582 300Q540 307 510 330Q585 326 646 270Z" fill="#d76f45"/><path d="M580 360Q550 420 570 475" fill="none" stroke="#e7b45d" stroke-width="20" stroke-linecap="round"/><path d="M610 365Q635 420 610 480" fill="none" stroke="#d89b48" stroke-width="20" stroke-linecap="round"/><path d="M570 475 615 500M610 480 570 500" stroke="#294943" stroke-width="9" stroke-linecap="round"/><path d="M595 290Q650 335 700 350" fill="none" stroke="#fffaf0" stroke-width="24" stroke-linecap="round"/><path d="M595 290Q650 335 700 350" fill="none" stroke="#294943" stroke-width="4" stroke-linecap="round"/></g></g><g fill="#789474"><path d="M90 570q10-55 18 0q20-60 15 0q25-40 20 0M1010 570q10-65 18 0q25-50 18 0q25-45 25 0"/></g></svg></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>鹈鹕骑车</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#f6f0df}
+body{font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;color:#24443f}
+.wrap{position:relative;width:100%;height:100%}
+.title{position:absolute;z-index:5;left:max(24px,6vw);top:max(26px,5vh);pointer-events:none}
+.title p{margin:0 0 14px;color:#b76542;font-size:clamp(14px,2vw,22px);letter-spacing:.06em}
+.title b{display:block;font-size:clamp(34px,5vw,68px);line-height:1.15;font-weight:500}
+svg{display:block;width:100%;height:100%}
+.bob{animation:bob .55s ease-in-out infinite alternate}
+.scarf{transform-origin:625px 245px;animation:scarf .7s ease-in-out infinite alternate}
+@keyframes bob{to{transform:translateY(4px)}}
+@keyframes scarf{to{transform:rotate(6deg)}}
+@media (max-width:600px){
+  .title{left:26px;top:64px}
+  .title b{font-size:42px}
+  .title p{font-size:15px}
+}
+@media(prefers-reduced-motion:reduce){.bob,.scarf{animation:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="title"><p>PELICAN ON WHEELS</p><b>骑慢一点，<br>海风会等你。</b></div>
+  <svg viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid meet" aria-label="鹈鹕在海边骑自行车">
+    <rect width="1200" height="700" fill="#f6f0df"/>
+    <circle cx="1000" cy="135" r="55" fill="#e7b45d" opacity=".65"/>
+    <path d="M0 405 Q180 370 350 405T700 392T1200 398V570H0Z" fill="#c9ded6"/>
+    <path d="M0 435q180-30 360 0t360 0t480 0" fill="none" stroke="#8bb3ad" stroke-width="3"/>
+    <g stroke="#b8a98b" stroke-width="5" stroke-dasharray="70 90">
+      <path d="M-200 590H1400">
+        <animateTransform attributeName="transform" type="translate" from="0 0" to="-160 0" dur="1.15s" repeatCount="indefinite"/>
+      </path>
+    </g>
+
+    <!-- rear wheel -->
+    <g transform="translate(420 520)">
+      <circle r="112" fill="#f6f0df" stroke="#294943" stroke-width="8"/>
+      <g stroke="#71847b" stroke-width="2">
+        <path d="M-105 0H105M0-105V105M-74-74 74 74M-74 74 74-74"/>
+        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="1.15s" repeatCount="indefinite"/>
+      </g>
+      <circle r="10" fill="#294943"/>
+    </g>
+
+    <!-- front wheel -->
+    <g transform="translate(790 520)">
+      <circle r="112" fill="#f6f0df" stroke="#294943" stroke-width="8"/>
+      <g stroke="#71847b" stroke-width="2">
+        <path d="M-105 0H105M0-105V105M-74-74 74 74M-74 74 74-74"/>
+        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="1.15s" repeatCount="indefinite"/>
+      </g>
+      <circle r="10" fill="#294943"/>
+    </g>
+
+    <!-- bicycle frame -->
+    <g fill="none" stroke="#5d876f" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M420 520 535 365 610 520H420L555 445 790 520 700 350"/>
+      <path d="M535 365h-55M675 350h70"/>
+    </g>
+
+    <!-- crank -->
+    <g transform="translate(610 520)">
+      <circle r="24" fill="#5d876f"/>
+      <g stroke="#294943" stroke-width="8" stroke-linecap="round">
+        <path d="M0 0L42 18M0 0L-42 -18"/>
+        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="1.15s" repeatCount="indefinite"/>
+      </g>
+    </g>
+
+    <!-- pelican -->
+    <g class="bob">
+      <path d="M550 385Q510 300 545 210Q580 145 650 175Q695 190 690 245Q682 302 625 330L610 390Z" fill="#fffaf0" stroke="#294943" stroke-width="4"/>
+      <path d="M646 205Q760 205 808 238Q731 268 647 253Z" fill="#e9a650" stroke="#294943" stroke-width="4"/>
+      <circle cx="655" cy="194" r="7" fill="#294943"/>
+      <path d="M570 193Q600 135 670 163L690 190Q625 171 570 193Z" fill="#668d75" stroke="#294943" stroke-width="4"/>
+      <path class="scarf" d="M625 246Q560 238 500 270Q545 280 582 300Q540 307 510 330Q585 326 646 270Z" fill="#d76f45"/>
+      <path d="M595 290Q650 335 700 350" fill="none" stroke="#fffaf0" stroke-width="24" stroke-linecap="round"/>
+      <path d="M595 290Q650 335 700 350" fill="none" stroke="#294943" stroke-width="4" stroke-linecap="round"/>
+    </g>
+
+    <!-- legs, pedal motion -->
+    <g fill="none" stroke-linecap="round">
+      <path d="M580 360Q550 420 570 475" stroke="#e7b45d" stroke-width="20"/>
+      <path d="M610 365Q635 420 610 480" stroke="#d89b48" stroke-width="20"/>
+      <g stroke="#294943" stroke-width="9">
+        <path d="M570 475L615 500">
+          <animate attributeName="d" dur="1.15s" repeatCount="indefinite"
+            values="M570 475L615 500;M570 475L596 535;M570 475L545 505;M570 475L596 455;M570 475L615 500"/>
+        </path>
+        <path d="M610 480L570 500">
+          <animate attributeName="d" dur="1.15s" repeatCount="indefinite"
+            values="M610 480L570 500;M610 480L585 450;M610 480L625 535;M610 480L650 505;M610 480L570 500"/>
+        </path>
+      </g>
+    </g>
+
+    <g fill="#789474">
+      <path d="M90 570q10-55 18 0q20-60 15 0q25-40 20 0M1010 570q10-65 18 0q25-50 18 0q25-45 25 0"/>
+    </g>
+  </svg>
+</div>
+</body>
+</html>
